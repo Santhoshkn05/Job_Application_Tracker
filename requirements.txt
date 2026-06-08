@@ -1,0 +1,25 @@
+# Frontend Requirements
+The frontend uses plain HTML, CSS, and JavaScript
+Bootstrap Icons: https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css
+
+# Backend Requirements
+bcrypt==6.0.0
+cors==2.8.6
+express==5.2.1
+express-session==1.18.0
+mysql2==3.22.5
+
+# Database Requirements
+# MySQL Database Server
+# Version: 8.0+ recommended
+# 
+# Database Setup:
+# - Create database: job_tracker
+# - Users table with columns: id, name, email, password
+# - Applications table with columns: id, user_id, company_name, job_role, location, salary, status, date, interview_date
+#
+# Connection Details (configured in backend/server.js):
+# - Host: localhost
+# - User: root
+# - Password: (configured in server.js)
+# - Database: job_tracker

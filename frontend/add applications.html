@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <a href="index.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i>
+        </a>
+        <h1 class="h1-create_View-appl">CREATE APPLICATION</h1>
+    </header>
+
+    <div class="application-card">
+        <form id="application_form">
+            <label for="company_name">Company Name</label>
+            <input type="text" placeholder="Name of the Company" id="company_name" name="company_name" required>
+            <label for="job_role">Job Role</label>
+            <input type="text" placeholder="Job Role" id="job_role" name="job_role" required>
+            <label for="location">Location</label>
+            <input type="text" placeholder="Location" id="location" name="location" required>
+            <label for="salary">Salary</label>
+            <input type="text" placeholder="Salary" id="salary" name="salary" required>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+            <label for="interview_date">Interview Date</label>
+            <input type="date" id="interview_date" name="interview_date">
+            <label for="status">Status</label>
+            <select id="status" name="status" value="" required>
+                    <option value="">Select Status</option>
+                    <option value="applied">Applied</option>
+                    <option value="interview">Interview</option>
+                    <option value="postponed">Postponed</option>
+                    <option value="selected">Selected</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+    </div>
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

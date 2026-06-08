@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <nav>
+            <button id="navToggle" class="nav-toggle" aria-label="Open navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="add applications.html">Applications</a></li>
+                <li><a href="Applications.html">My Applications</a></li>
+                <li><a href="Profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <h1>JOB APPLICATION TRACKER</h1>
+        <button id="mobileThemeBtn" class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
+            <i class="bi bi-moon-fill"></i>
+        </button>
+    </header>
+    
+    <div class="container">
+        <div class="sidebar">
+
+            <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
+
+            <a href="Applications.html"><i class="bi bi-clipboard-data-fill"></i></a>
+
+            <div class="theme-toggle">
+                <a href="#" id="themeBtn"><i class="bi bi-moon-fill"></i></a>
+            </div>
+
+            <div class="logout"><a href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+     <main>
+        <section class="dashboard">
+                <div class="cards">
+                    <div class="card total">
+                    <h3>Total Applications</h3>
+                    <div class="icon_count">
+                        <p id="totalCount">0</p>
+                        <i class="bi bi-clipboard-data"></i>
+                    </div> 
+                    </div>
+
+                    <div class="card applied">
+                    <h3>Applied</h3>
+                    <div class="icon_count">
+                        <p id="appliedCount">0</p>
+                        <i class="bi bi-send-check"></i>
+                    </div>
+                    </div>
+
+                    <div class="card interview">
+                    <h3>Interviews</h3>
+                    <div class="icon_count">
+                        <p id="interviewCount">0</p>
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+                    </div>
+
+                    <div class="card selected">
+                    <h3>Selected</h3>
+                    <div class="icon_count">
+                        <p id="selectedCount">0</p>
+                        <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                    </div>
+
+                    <div class="card rejected">
+                    <h3>Rejected</h3>
+                    <div class="icon_count">
+                        <p id="rejectedCount">0</p>
+                        <i class="bi bi-x-circle-fill"></i>
+                    </div>
+                    </div>
+                </div>
+        </section>
+    <!-- Content Section -->
+     <section class="content">
+     <section class="left-part">
+        <h3>Add Application Form</h3>
+        <form id="application_form">
+            <label for="company_name">Company Name</label>
+            <input type="text" placeholder="Name of the Company" id="company_name" name="company_name" required>
+            <label for="job_role">Job role</label>
+            <input type="text" placeholder="Job Role" id="job_role" name="job_role" required>
+            <label for="location">Location</label>
+            <input type="text" placeholder="Location" id="location" name="location" required>
+            <label for="salary">Salary</label>
+            <input type="text" placeholder="Salary" id="salary" name="salary" required>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+            <label for="interview_date">Interview Date</label>
+            <input type="date" id="interview_date" name="interview_date">
+            <label for="status">Status</label>
+            <select id="status" name="status" value="" required>
+                    <option value="">Select Status</option>
+                    <option value="applied">Applied</option>
+                    <option value="interview">Interview</option>
+                    <option value="postponed">Postponed</option>
+                    <option value="selected">Selected</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            <button type="submit">Submit Application</button>
+        </form>
+     </section>
+     <section class="right-part">
+        <h3>Applications List</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Company</th>
+                    <th>Job Role</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="applicationList">
+
+            </tbody>
+        </table>
+     </section>
+     </section>
+     </main>
+    </div>
+    
+    <!-- Application details view -->
+    <div id="detailsview" class="view" aria-hidden="true" role="dialog">
+    <div class="view-content">
+        <button id="closeDetails" class="view-close">&times;</button>
+        <h2 id="viewCompany"></h2>
+        <p><strong>Role:</strong> <span id="viewRole"></span></p>
+        <p><strong>Location:</strong> <span id="viewLocation"></span></p>
+        <p><strong>Salary:</strong> <span id="viewSalary"></span></p>
+        <p><strong>Date:</strong> <span id="viewDate"></span></p>
+        <p><strong>Interview:</strong> <span id="viewInterview"></span></p>
+        <p><strong>Status:</strong> <span id="viewStatus"></span></p>
+
+        <div class="view-actions">
+        <button id="goToApplications">Changes → Applications</button>
+        <button id="closeBtn">Close</button>
+        </div>
+    </div>
+    </div>
+     <footer>
+        <p>&copy; Job Application Tracker.</p>
+     </footer>
+     <script src="theme.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

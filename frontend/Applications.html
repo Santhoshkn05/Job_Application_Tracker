@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="simple-header">
+        <a href="index.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i>
+        </a>
+        <h1 class="h1-create_View-appl">MY APPLICATIONS</h1>
+    </header>
+
+    <section class="applications-wrapper">
+        <div class="toolbar">
+            <input class="search-box" type="text" placeholder="Search company">
+            <select class="appl-status">
+                <option>All Status</option>
+                <option>Applied</option>
+                <option>Interview</option>
+                <option>Postponed</option>
+                <option>Selected</option>
+                <option>Rejected</option>
+            </select>
+            <button class="appl-button">Search</button>
+            <p id="statusMessage" class="status-message"></p>
+        </div>
+
+        <div class="myappl-container">
+        <table class="applications-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Company Name</th>
+                    <th>Job Role</th>
+                    <th>Location</th>
+                    <th>Salary</th>
+                    <th>Date</th>
+                    <th>Interview Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="myApplicationList">
+            </tbody>
+        </table>
+        </div>
+    </section>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Application</h2>
+                <span class="close-edit">&times;</span>
+            </div>
+            <form id="editForm">
+                <label for="editCompanyName">Company Name</label>
+                <input type="text" id="editCompanyName" required>
+                
+                <label for="editJobRole">Job Role</label>
+                <input type="text" id="editJobRole" required>
+                
+                <label for="editLocation">Location</label>
+                <input type="text" id="editLocation" required>
+                
+                <label for="editSalary">Salary</label>
+                <input type="text" id="editSalary">
+                
+                <label for="editDate">Date</label>
+                <input type="date" id="editDate">
+                
+                <label for="editInterviewDate">Interview Date</label>
+                <input type="date" id="editInterviewDate">
+                
+                <label for="editStatus">Status</label>
+                <select id="editStatus" class="edit-status" required>
+                    <option value="applied">Applied</option>
+                    <option value="interview">Interview</option>
+                    <option value="postponed">Postponed</option>
+                    <option value="selected">Selected</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+                
+                <input type="hidden" id="editApplicationId">
+                
+                <div class="modal-actions">
+                    <button type="button" class="cancel-edit">Cancel</button>
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

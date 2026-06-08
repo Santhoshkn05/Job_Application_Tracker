@@ -1,0 +1,306 @@
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Header & Navigation */
+.dark-mode header {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Dashboard Components */
+.dark-mode .left-part,
+.dark-mode .right-part,
+.dark-mode .sidebar,
+.dark-mode .card,
+.dark-mode .application-card,
+.dark-mode .myappl-container,
+.dark-mode .applications-wrapper {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Login & Register Cards */
+.dark-mode .login-card,
+.dark-mode .register-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Headings */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode label {
+    color: white;
+}
+
+/* Forms */
+.dark-mode input,
+.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+.dark-mode input::placeholder {
+    color: #aaa;
+}
+
+/* Links */
+.dark-mode a {
+    color: #ddd;
+}
+
+.dark-mode a:hover {
+    color: white;
+}
+
+/* Tables */
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+    color: white;
+}
+
+.dark-mode th {
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode td {
+    border-bottom: 1px solid #333;
+}
+
+/* Footer */
+.dark-mode footer,
+.dark-mode footer p {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Buttons */
+.dark-mode button {
+    background-color: brown;
+    color: white;
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .theme-toggle a {
+    color: white;
+}
+
+.dark-mode .theme-toggle a:hover {
+    color: #ddd;
+}
+
+.dark-mode h2 {
+    color: white;
+}
+
+.dark-mode .register-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode label {
+    color: white;
+}
+
+.dark-mode input {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+.dark-mode input:focus {
+    border-color: #0d6efd;
+}
+
+.dark-mode .register-btn {
+    background-color: #0d6efd;
+}
+
+.dark-mode .register-btn:hover {
+    background-color: #0b5ed7;
+}
+
+.dark-mode .login-redirect p {
+    color: #aaa;
+}
+
+.dark-mode .login-redirect a {
+    color: #0d6efd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+    margin-left: auto;
+}
+
+.theme-toggle a {
+    color: #333;
+    font-size: 24px;
+}
+
+.theme-toggle a:hover {
+    color: #666;
+}
+
+h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+}
+
+.register-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #0b5ed7;
+}
+
+.login-redirect {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-redirect p {
+    color: #666;
+}
+
+.login-redirect a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-redirect a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 12px 10px;
+        gap: 10px;
+    }
+
+    .register-container {
+        padding: 20px 0;
+    }
+
+    .register-card {
+        width: 100%;
+        max-width: 420px;
+        margin: 40px auto;
+        padding: 24px;
+        height: auto;
+    }
+
+    .register-form {
+        gap: 10px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    .register-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .login-redirect {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
