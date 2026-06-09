@@ -44,7 +44,7 @@ function requireAuth(req, res, next) {
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Password",
+    password: "enter database password",
     database: "job_tracker"
 });
 
